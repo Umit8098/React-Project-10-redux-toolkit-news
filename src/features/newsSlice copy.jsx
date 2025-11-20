@@ -16,11 +16,11 @@ const initialState = {
 //! Thunk'ın amaci reducers'a islenmis sonuclari gondermeden once gecikmeli asenkron ismlerinin yurutulmesini saglamaktir.
 
 // API'den thunk middleware ile async veri çekme;
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = '535614d33ce549c1a22ff4d924b213e7';
 export const getNews = createAsyncThunk(
     'news/getNews', 
     async () => {
-        const url = `https://gnews.io/api/v4/top-headlines?lang=tr&token=${API_KEY}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
         try {
             const {data} = await axios(url);
             return data.articles;
