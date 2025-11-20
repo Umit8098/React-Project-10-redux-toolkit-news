@@ -54,7 +54,7 @@ const News = () => {
               <CardMedia
                 component="img"
                 height="250"
-                image={item?.image}
+                image={item?.urlToImage}
                 alt="img"
               />
               <CardContent>
